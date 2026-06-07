@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FE"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Fuel Type"
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgFuelType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/rbRon95" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RON95" android:checked="true" />
+            <RadioButton android:id="@+id/rbRon97" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RON97" android:layout_marginStart="10dp" />
+            <RadioButton android:id="@+id/rbDiesel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Diesel" android:layout_marginStart="10dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price (RM per Liter)"
+            android:layout_marginTop="20dp"
+            android:textColor="#9E9E9E"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:padding="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usage (Liters)"
+            android:layout_marginTop="20dp"
+            android:textColor="#9E9E9E"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etUsage"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:padding="15dp" />
+
+        <CheckBox
+            android:id="@+id/cbEligible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="BUDI MADANI Eligible (Yes)" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#2D1160"
+            android:text="CALCULATE"
+            android:textColor="#FFFFFF" />
+
+        <!-- Output Section -->
+        <LinearLayout
+            android:id="@+id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#E3F2FD"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <TextView android:id="@+id/tvTotalCost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Petrol Cost: RM 0.00" android:textSize="16sp" />
+            <TextView android:id="@+id/tvRebate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BUDI Rebate: RM 0.00" android:textSize="16sp" android:layout_marginTop="5dp" />
+            <TextView android:id="@+id/tvFinalSaving" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Final Amount: RM 0.00" android:textSize="18sp" android:textStyle="bold" android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
